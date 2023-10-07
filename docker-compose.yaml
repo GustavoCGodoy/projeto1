@@ -4,7 +4,7 @@ services:
   phonebook-mysql:
     container_name: phonebook-mysql
     build:
-      context: backend
+      context: .
       # Atencao: Incluir referencia para o nome do dockerfile de especificacao da imagem do backend 
       dockerfile: /Dockerfile-mysql
     restart: always
@@ -12,7 +12,7 @@ services:
   phonebook-app:
     container_name: phonebook-app
     build:
-      context: frontend
+      context: .
       # Atencao: Incluir referencia para o nome do dockerfile de especificacao da imagem do frontend
       dockerfile: /Dockerfile-app
     depends_on:
