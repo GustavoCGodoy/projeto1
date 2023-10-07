@@ -6,7 +6,7 @@ services:
     build:
       context: .
       # Atencao: Incluir referencia para o nome do dockerfile de especificacao da imagem do backend 
-      dockerfile: /Dockerfile-mysql
+      dockerfile: projeto1/Dockerfile-mysql
     restart: always
 
   phonebook-app:
@@ -14,7 +14,7 @@ services:
     build:
       context: .
       # Atencao: Incluir referencia para o nome do dockerfile de especificacao da imagem do frontend
-      dockerfile: /Dockerfile-app
+      dockerfile: projeto1/Dockerfile-app
     depends_on:
       - phonebook-mysql
     ports:
